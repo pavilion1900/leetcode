@@ -13,7 +13,7 @@ public class FirstBadVersion {
 //        the following ones to be bad.
 //        You are given an API bool isBadVersion(version) which returns whether version is bad. Implement a function
 //        to find the first bad version. You should minimize the number of calls to the API.
-
+//
 //        System.out.println(firstBadVersion(1));             // bad = 1
 //        System.out.println(firstBadVersion(5));             // bad = 4
         System.out.println(firstBadVersion(2_126_753_390)); // bad = 1_702_766_719
@@ -23,7 +23,7 @@ public class FirstBadVersion {
         int left = 0;
         int right = n;
         while (left < right) {
-            int mid = left + (right - left) / 2;
+            int mid = (left + right) >>> 1;
             if (isBadVersion(mid)) {
                 right = mid;
             } else {
