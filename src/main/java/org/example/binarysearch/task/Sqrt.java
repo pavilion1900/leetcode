@@ -17,22 +17,6 @@ public class Sqrt {
     }
 
     public static int mySqrt(int x) {
-        if (x < 2) {
-            return x;
-        }
-        int left = 2;
-        int right = x / 2;
-        while (left <= right) {
-            int mid = (left + right) >>> 1;
-            long sqMid = (long) mid * mid;
-            if (sqMid == x) {
-                return mid;
-            } else if (sqMid > x) {
-                right = --mid;
-            } else {
-                left = ++mid;
-            }
-        }
-        return right;
+        return -1;
     }
 }
