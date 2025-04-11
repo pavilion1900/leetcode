@@ -4,7 +4,6 @@ import java.util.Arrays;
 
 public class TwoSumIIInputArrayIsSorted {
 
-    public static void main(String[] args) {
 //        167. Two Sum II - Input Array Is Sorted
 //        Medium
 //
@@ -16,6 +15,7 @@ public class TwoSumIIInputArrayIsSorted {
 //        The tests are generated such that there is exactly one solution. You may not use the same element twice.
 //        Your solution must use only constant extra space.
 
+    public static void main(String[] args) {
         System.out.println(Arrays.toString(twoSum(new int[]{2, 7, 11, 15}, 9)));  // [1, 2]
         System.out.println(Arrays.toString(twoSum(new int[]{2, 7, 11, 15}, 26))); // [3, 4]
         System.out.println(Arrays.toString(twoSum(new int[]{2, 3, 4}, 6)));       // [1, 3]

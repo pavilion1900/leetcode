@@ -4,7 +4,6 @@ import java.util.Arrays;
 
 public class FindFirstAndLastPositionOfElementInSortedArray {
 
-    public static void main(String[] args) {
 //        34. Find First and Last Position of Element in Sorted Array
 //        Medium
 //
@@ -12,6 +11,7 @@ public class FindFirstAndLastPositionOfElementInSortedArray {
 //        of a given target value.
 //        If target is not found in the array, return [-1, -1].
 
+    public static void main(String[] args) {
         System.out.println(Arrays.toString(searchRange(new int[]{5, 7, 7, 8, 8, 10}, 8))); // [3, 4]
         System.out.println(Arrays.toString(searchRange(new int[]{5, 7, 7, 8, 8, 10}, 6))); // [-1, -1]
         System.out.println(Arrays.toString(searchRange(new int[]{}, 0)));                  // [-1, -1]

@@ -2,7 +2,6 @@ package org.example.binarysearch.example;
 
 public class SearchInRotatedSortedArray {
 
-    public static void main(String[] args) {
 //        33. Search in Rotated Sorted Array
 //        Medium
 //
@@ -14,6 +13,7 @@ public class SearchInRotatedSortedArray {
 //        Given the array nums after the possible rotation and an integer target, return the index of target
 //        if it is in nums, or -1 if it is not in nums.
 
+    public static void main(String[] args) {
         System.out.println(search(new int[]{4, 5, 6, 7, 0, 1, 2}, 0)); // 4
         System.out.println(search(new int[]{4, 5, 6, 7, 0, 1, 2}, 1)); // 5
         System.out.println(search(new int[]{4, 5, 6, 7, 0, 1, 2}, 3)); // -1

@@ -2,7 +2,6 @@ package org.example.twopointers.example;
 
 public class RemoveDuplicatesFromSortedArray {
 
-    public static void main(String[] args) {
 //        26. Remove Duplicates from Sorted Array
 //        Easy
 //
@@ -14,6 +13,7 @@ public class RemoveDuplicatesFromSortedArray {
 //        they were present in nums initially. The remaining elements of nums are not important as well as the size of nums.
 //        Return k.
 
+    public static void main(String[] args) {
         System.out.println(removeDuplicates(new int[]{}));                               // 0
         System.out.println(removeDuplicates(new int[]{1}));                              // 1
         System.out.println(removeDuplicates(new int[]{1, 1, 2}));                        // 2

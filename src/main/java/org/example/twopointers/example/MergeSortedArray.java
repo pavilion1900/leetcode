@@ -4,7 +4,6 @@ import java.util.Arrays;
 
 public class MergeSortedArray {
 
-    public static void main(String[] args) {
 //        88. Merge Sorted Array
 //        Easy
 //
@@ -15,6 +14,7 @@ public class MergeSortedArray {
 //        To accommodate this, nums1 has a length of m + n, where the first m elements denote the elements that
 //        should be merged, and the last n elements are set to 0 and should be ignored. nums2 has a length of n.
 
+    public static void main(String[] args) {
         int[] array1 = new int[]{1, 2, 3, 0, 0, 0};
         int[] array2 = new int[]{2, 5, 6};
         merge(array1, 3, array2, 3);

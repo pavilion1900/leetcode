@@ -4,7 +4,6 @@ import java.util.Arrays;
 
 public class SortColors {
 
-    public static void main(String[] args) {
 //        75. Sort Colors
 //        Medium
 //
@@ -13,6 +12,7 @@ public class SortColors {
 //        We will use the integers 0, 1, and 2 to represent the color red, white, and blue, respectively.
 //        You must solve this problem without using the library's sort function.
 
+    public static void main(String[] args) {
         int[] array1 = new int[]{2, 0, 2, 1, 1, 0};
         int[] array2 = new int[]{2, 0, 1};
         int[] array3 = new int[]{1, 2, 0};

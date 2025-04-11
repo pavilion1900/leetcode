@@ -2,7 +2,6 @@ package org.example.binarysearch.task;
 
 public class Sqrt {
 
-    public static void main(String[] args) {
 //        69. Sqrt(x)
 //        Easy
 //
@@ -10,6 +9,7 @@ public class Sqrt {
 //        The returned integer should be non-negative as well.
 //        You must not use any built-in exponent function or operator.
 
+    public static void main(String[] args) {
         System.out.println(mySqrt(0));  // 0
         System.out.println(mySqrt(2));  // 1
         System.out.println(mySqrt(4));  // 2

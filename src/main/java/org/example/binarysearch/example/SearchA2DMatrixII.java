@@ -2,7 +2,6 @@ package org.example.binarysearch.example;
 
 public class SearchA2DMatrixII {
 
-    public static void main(String[] args) {
 //        240. Search a 2D Matrix II
 //        Medium
 //
@@ -11,6 +10,7 @@ public class SearchA2DMatrixII {
 //        Integers in each row are sorted in ascending from left to right.
 //        Integers in each column are sorted in ascending from top to bottom.
 
+    public static void main(String[] args) {
         System.out.println(searchMatrix(new int[][]{
                 {1, 4, 7, 11, 15},
                 {2, 5, 8, 12, 19},
