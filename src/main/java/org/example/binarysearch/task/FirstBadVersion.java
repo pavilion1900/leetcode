@@ -23,7 +23,7 @@ public class FirstBadVersion {
         return -1;
     }
 
-    static boolean isBadVersion(int version) {
+    private static boolean isBadVersion(int version) {
         return 1_702_766_719 <= version;
     }
 }

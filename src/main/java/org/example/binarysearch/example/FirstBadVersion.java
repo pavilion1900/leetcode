@@ -20,7 +20,7 @@ public class FirstBadVersion {
     }
 
     public static int firstBadVersion(int n) {
-        int left = 0;
+        int left = 1;
         int right = n;
         while (left < right) {
             int mid = (left + right) >>> 1;
@@ -33,8 +33,7 @@ public class FirstBadVersion {
         return left;
     }
 
-    static boolean isBadVersion(int version) {
-//        return 4 == version;
+    private static boolean isBadVersion(int version) {
         return 1_702_766_719 <= version;
     }
 }
