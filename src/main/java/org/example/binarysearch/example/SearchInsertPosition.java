@@ -23,9 +23,10 @@ public class SearchInsertPosition {
         int right = nums.length - 1;
         while (left <= right) {
             int mid = (left + right) >>> 1;
-            if (nums[mid] == target) {
+            int val = nums[mid];
+            if (val == target) {
                 return mid;
-            } else if (nums[mid] > target) {
+            } else if (val > target) {
                 right = --mid;
             } else {
                 left = ++mid;
