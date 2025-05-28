@@ -28,17 +28,17 @@ public class ValidateBinarySearchTree {
     }
 
     public static boolean isValidBST(TreeNode10 root) {
-        return validate(root, null, null);
+        return isValid(root, null, null);
     }
 
-    private static boolean validate(TreeNode10 root, Integer left, Integer right) {
+    private static boolean isValid(TreeNode10 root, Integer left, Integer right) {
         if (root == null) {
             return true;
         }
         if ((left != null && root.val >= left) || (right != null && root.val <= right)) {
             return false;
         }
-        return validate(root.left, root.val, right) && validate(root.right, left, root.val);
+        return isValid(root.left, root.val, right) && isValid(root.right, left, root.val);
     }
 }
 
