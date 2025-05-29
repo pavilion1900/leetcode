@@ -28,22 +28,23 @@ public class BinaryTreeLevelOrderTraversal {
 
     public static List<List<Integer>> levelOrder(TreeNode3 root) {
         List<List<Integer>> rsl = new ArrayList<>();
-        helper(rsl, root, 0);
+        helper(root, rsl, 0);
         return rsl;
     }
 
-    private static void helper(List<List<Integer>> rsl, TreeNode3 root, Integer level) {
-        if (root != null) {
-            if (rsl.size() == level) {
-                List<Integer> list = new ArrayList<>();
-                list.add(root.val);
-                rsl.add(list);
-            } else {
-                rsl.get(level).add(root.val);
-            }
-            helper(rsl, root.left, level + 1);
-            helper(rsl, root.right, level + 1);
+    private static void helper(TreeNode3 root, List<List<Integer>> rsl, int level) {
+        if (root == null) {
+            return;
         }
+        if (rsl.size() == level) {
+            List<Integer> list = new ArrayList<>();
+            list.add(root.val);
+            rsl.add(list);
+        } else {
+            rsl.get(level).add(root.val);
+        }
+        helper(root.left, rsl, level + 1);
+        helper(root.right, rsl, level + 1);
     }
 }
 

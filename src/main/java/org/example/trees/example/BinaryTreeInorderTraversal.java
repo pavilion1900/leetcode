@@ -49,11 +49,12 @@ public class BinaryTreeInorderTraversal {
 //    }
 //
 //    private static void helper(TreeNode root, List<Integer> rsl) {
-//        if (root != null) {
-//            helper(root.left, rsl);
-//            rsl.add(root.val);
-//            helper(root.right, rsl);
+//        if (root == null) {
+//            return;
 //        }
+//        helper(root.left, rsl);
+//        rsl.add(root.val);
+//        helper(root.right, rsl);
 //    }
 
     public static List<Integer> inorderTraversal(TreeNode root) {

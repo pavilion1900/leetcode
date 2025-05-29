@@ -49,11 +49,12 @@ public class BinaryTreePostorderTraversal {
     }
 
     private static void helper(TreeNode2 root, List<Integer> rsl) {
-        if (root != null) {
-            helper(root.left, rsl);
-            helper(root.right, rsl);
-            rsl.add(root.val);
+        if (root == null) {
+            return;
         }
+        helper(root.left, rsl);
+        helper(root.right, rsl);
+        rsl.add(root.val);
     }
 }
 
