@@ -17,14 +17,14 @@ public class TotalHammingDistance {
     public static int totalHammingDistance(int[] nums) {
         int[] countBits = new int[31];
         for (int num : nums) {
-            for (int i = 0; i < 31; i++) {
+            for (int i = 0; i < countBits.length; i++) {
                 countBits[i] += num & 1;
                 num >>= 1;
             }
         }
         int rsl = 0;
-        for (int i = 0; i < 31; i++) {
-            rsl += countBits[i] * (nums.length - countBits[i]);
+        for (int count : countBits) {
+            rsl += count * (nums.length - count);
         }
         return rsl;
     }
