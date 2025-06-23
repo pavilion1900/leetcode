@@ -15,7 +15,7 @@ public class TotalHammingDistance {
     }
 
     public static int totalHammingDistance(int[] nums) {
-        int[] countBits = new int[31];
+        int[] countBits = new int[32];
         for (int num : nums) {
             for (int i = 0; i < countBits.length; i++) {
                 countBits[i] += num & 1;
