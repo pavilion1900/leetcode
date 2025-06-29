@@ -21,30 +21,10 @@ public class SearchInRotatedSortedArray {
         System.out.println(search(new int[]{1}, 0));                   // -1
     }
 
-    public static int search(int[] nums, int target) {
-        int left = 0;
-        int right = nums.length - 1;
-        while (left <= right) {
-            int mid = (left + right) >>> 1;
-            if (nums[mid] == target) {
-                return mid;
-            } else if (nums[mid] >= nums[left]) {
-                if (target >= nums[left] && target < nums[mid]) {
-                    right = --mid;
-                } else {
-                    left = ++mid;
-                }
-            } else {
-                if (target > nums[mid] && target <= nums[right]) {
-                    left = ++mid;
-                } else {
-                    right = --mid;
-                }
-            }
-        }
-        return -1;
-    }
-
+//    Approach 1: Find Pivot Index + Binary Search
+//    Time complexity  : O(log N)
+//    Space complexity : O(1)
+//
 //    public static int search(int[] nums, int target) {
 //        int left = 0;
 //        int right = nums.length - 1;
@@ -76,4 +56,32 @@ public class SearchInRotatedSortedArray {
 //        }
 //        return -1;
 //    }
+
+//    Approach 3: One Binary Search
+//    Time complexity  : O(log N)
+//    Space complexity : O(1)
+
+    public static int search(int[] nums, int target) {
+        int left = 0;
+        int right = nums.length - 1;
+        while (left <= right) {
+            int mid = (left + right) >>> 1;
+            if (nums[mid] == target) {
+                return mid;
+            } else if (nums[mid] >= nums[left]) {
+                if (target >= nums[left] && target < nums[mid]) {
+                    right = --mid;
+                } else {
+                    left = ++mid;
+                }
+            } else {
+                if (target > nums[mid] && target <= nums[right]) {
+                    left = ++mid;
+                } else {
+                    right = --mid;
+                }
+            }
+        }
+        return -1;
+    }
 }

@@ -2,13 +2,13 @@ package org.example.binarysearch.task;
 
 public class SearchA2DMatrixII {
 
-//        240. Search a 2D Matrix II
-//        Medium
+//    240. Search a 2D Matrix II
+//    Medium
 //
-//        Write an efficient algorithm that searches for a value target in an m x n integer matrix matrix.
-//        This matrix has the following properties:
-//        Integers in each row are sorted in ascending from left to right.
-//        Integers in each column are sorted in ascending from top to bottom.
+//    Write an efficient algorithm that searches for a value target in an m x n integer matrix matrix.
+//    This matrix has the following properties:
+//    Integers in each row are sorted in ascending from left to right.
+//    Integers in each column are sorted in ascending from top to bottom.
 
     public static void main(String[] args) {
         System.out.println(searchMatrix(new int[][]{

@@ -2,12 +2,12 @@ package org.example.binarysearch.task;
 
 public class PeakIndexInAMountainArray {
 
-//        852. Peak Index in a Mountain Array
-//        Medium
+//    852. Peak Index in a Mountain Array
+//    Medium
 //
-//        You are given an integer mountain array arr of length n where the values increase to a peak element
-//        and then decrease.
-//        Return the index of the peak element.
+//    You are given an integer mountain array arr of length n where the values increase to a peak element
+//    and then decrease.
+//    Return the index of the peak element.
 
     public static void main(String[] args) {
         System.out.println(peakIndexInMountainArray(new int[]{0, 1, 0}));     // 1
