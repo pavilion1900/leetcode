@@ -35,11 +35,12 @@ public class PeakIndexInAMountainArray {
         int left = 0;
         int right = arr.length - 1;
         while (left < right) {
-            int mid = (left + right) >>> 1;
-            if (arr[mid] > arr[mid + 1]) {
-                right = mid;
+            int midInd = (left + right) >>> 1;
+            int midVal = arr[midInd];
+            if (midVal > arr[midInd + 1]) {
+                right = midInd;
             } else {
-                left = ++mid;
+                left = midInd + 1;
             }
         }
         return left;

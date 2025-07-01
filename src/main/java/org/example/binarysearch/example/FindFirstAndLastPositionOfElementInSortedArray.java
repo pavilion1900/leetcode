@@ -31,27 +31,28 @@ public class FindFirstAndLastPositionOfElementInSortedArray {
         return new int[]{left, right};
     }
 
-    private static int findBound(int[] nums, int target, boolean isFirst) {
+    private static int findBound(int[] nums, int target, boolean flag) {
         int left = 0;
         int right = nums.length - 1;
         while (left <= right) {
-            int mid = (left + right) >>> 1;
-            if (nums[mid] == target) {
-                if (isFirst) {
-                    if (mid == left || nums[mid - 1] != target) {
-                        return mid;
+            int midInd = (left + right) >>> 1;
+            int midVal = nums[midInd];
+            if (midVal == target) {
+                if (flag) {
+                    if (midInd == left || nums[midInd - 1] != target) {
+                        return midInd;
                     }
-                    right = --mid;
+                    right = midInd - 1;
                 } else {
-                    if (mid == right || nums[mid + 1] != target) {
-                        return mid;
+                    if (midInd == right || nums[midInd + 1] != target) {
+                        return midInd;
                     }
-                    left = ++mid;
+                    left = midInd + 1;
                 }
-            } else if (nums[mid] > target) {
-                right = --mid;
+            } else if (midVal > target) {
+                right = midInd - 1;
             } else {
-                left = ++mid;
+                left = midInd + 1;
             }
         }
         return -1;

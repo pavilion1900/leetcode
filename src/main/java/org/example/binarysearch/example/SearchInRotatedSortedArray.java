@@ -65,20 +65,21 @@ public class SearchInRotatedSortedArray {
         int left = 0;
         int right = nums.length - 1;
         while (left <= right) {
-            int mid = (left + right) >>> 1;
-            if (nums[mid] == target) {
-                return mid;
-            } else if (nums[mid] >= nums[left]) {
-                if (target >= nums[left] && target < nums[mid]) {
-                    right = --mid;
+            int midInd = (left + right) >>> 1;
+            int midVal = nums[midInd];
+            if (midVal == target) {
+                return midInd;
+            } else if (midVal >= nums[left]) {
+                if (target >= nums[left] && target < midVal) {
+                    right = midInd - 1;
                 } else {
-                    left = ++mid;
+                    left = midInd + 1;
                 }
             } else {
-                if (target > nums[mid] && target <= nums[right]) {
-                    left = ++mid;
+                if (target > midVal && target <= nums[right]) {
+                    left = midInd + 1;
                 } else {
-                    right = --mid;
+                    right = midInd - 1;
                 }
             }
         }

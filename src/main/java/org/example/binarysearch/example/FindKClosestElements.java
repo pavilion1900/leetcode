@@ -46,11 +46,12 @@ public class FindKClosestElements {
         int right = arr.length - k;
 
         while (left < right) {
-            int mid = (left + right) >>> 1;
-            if (x - arr[mid] > arr[mid + k] - x) {
-                left = mid + 1;
+            int midInd = (left + right) >>> 1;
+            int midVal = arr[midInd];
+            if (x - midVal > arr[midInd + k] - x) {
+                left = midInd + 1;
             } else {
-                right = mid;
+                right = midInd;
             }
         }
 

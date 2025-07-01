@@ -48,7 +48,7 @@ public class FirstBadVersion {
             if (isBadVersion(mid)) {
                 right = mid;
             } else {
-                left = ++mid;
+                left = mid + 1;
             }
         }
         return left;
