@@ -17,25 +17,33 @@ public class IntersectionOfTwoArraysII {
         System.out.println(Arrays.toString(intersect(new int[]{4, 9, 5}, new int[]{9, 4, 9, 8, 4}))); // [4, 9] || [9, 4]
     }
 
+//    Approach 1: Hash Map
+//    Time complexity  : O(m + n)
+//    Space complexity : O(min(m, n))
+
     public static int[] intersect(int[] nums1, int[] nums2) {
         if (nums1.length > nums2.length) {
             return intersect(nums2, nums1);
         }
-        Map<Integer, Integer> map = new HashMap<>();
+        Map<Integer, Integer> freq = new HashMap<>();
         for (int num : nums1) {
-            map.put(num, map.getOrDefault(num, 0) + 1);
+            freq.put(num, freq.getOrDefault(num, 0) + 1);
         }
         int p1 = 0;
         for (int num : nums2) {
-            int count = map.getOrDefault(num, 0);
+            int count = freq.getOrDefault(num, 0);
             if (count > 0) {
                 nums1[p1++] = num;
-                map.put(num, count - 1);
+                freq.put(num, count - 1);
             }
         }
         return Arrays.copyOfRange(nums1, 0, p1);
     }
 
+//    Approach 2: Sort
+//    Time complexity  : O(n * log(n) + m * log(m))
+//    Space complexity : from O(log(n) + log(m)) to O(n + m)
+//
 //    public static int[] intersect(int[] nums1, int[] nums2) {
 //        Arrays.sort(nums1);
 //        Arrays.sort(nums2);

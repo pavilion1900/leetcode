@@ -24,6 +24,10 @@ public class SortColors {
         System.out.println(Arrays.toString(array3)); // [0, 1, 2]
     }
 
+//    Approach 1: One Pass
+//    Time complexity  : O(N)
+//    Space complexity : O(1)
+
     public static void sortColors(int[] nums) {
         int p0 = 0;
         int curr = 0;
