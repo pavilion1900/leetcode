@@ -29,6 +29,10 @@ public class MoveZeroes {
         System.out.println(Arrays.toString(array5)); // [2, 1]
     }
 
+//    Approach 1:
+//    Time complexity  : O(N)
+//    Space complexity : O(1)
+
     public static void moveZeroes(int[] nums) {
         int nonZero = 0;
         int curr = 0;

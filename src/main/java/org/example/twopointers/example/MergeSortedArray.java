@@ -31,6 +31,21 @@ public class MergeSortedArray {
         System.out.println(Arrays.toString(array5)); // [1]
     }
 
+//    Approach 1: Merge and sort
+//    Time complexity  : O((n + m)log(n + m))
+//    Space complexity : O(N)
+//
+//    public static void merge(int[] nums1, int m, int[] nums2, int n) {
+//        for (int i = 0; i < n; i++) {
+//            nums1[i + m] = nums2[i];
+//        }
+//        Arrays.sort(nums1);
+//    }
+
+//    Approach 3: Three Pointers (Start From the End)
+//    Time complexity  : O(n + m)
+//    Space complexity : O(1)
+
     public static void merge(int[] nums1, int m, int[] nums2, int n) {
         int p1 = m - 1;
         int p2 = n - 1;

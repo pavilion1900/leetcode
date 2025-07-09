@@ -20,24 +20,28 @@ public class PartitionLabels {
         System.out.println(partitionLabels("eccbbbbdec"));               // [10]
     }
 
+//    Approach 1: Two Pointers
+//    Time complexity  : O(N)
+//    Space complexity : O(k)
+
     public static List<Integer> partitionLabels(String s) {
-        int[] lastPosition = new int[26];
+        int[] lastPositions = new int[26];
         for (int i = 0; i < s.length(); i++) {
             char ch = s.charAt(i);
-            lastPosition[ch - 'a'] = i;
+            lastPositions[ch - 'a'] = i;
         }
-        int pStart = 0;
-        int pEnd = 0;
-        List<Integer> pSize = new ArrayList<>();
+        int start = 0;
+        int end = 0;
+        List<Integer> sizes = new ArrayList<>();
         for (int i = 0; i < s.length(); i++) {
             char ch = s.charAt(i);
-            int position = lastPosition[ch - 'a'];
-            pEnd = Math.max(pEnd, position);
-            if (i == pEnd) {
-                pSize.add(i - pStart + 1);
-                pStart = i + 1;
+            int lastPosition = lastPositions[ch - 'a'];
+            end = Math.max(end, lastPosition);
+            if (i == end) {
+                sizes.add(i - start + 1);
+                start = i + 1;
             }
         }
-        return pSize;
+        return sizes;
     }
 }
