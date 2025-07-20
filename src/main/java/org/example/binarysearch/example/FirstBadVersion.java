@@ -28,7 +28,7 @@ public class FirstBadVersion {
 //    Space complexity : O(1)
 //
 //    public static int firstBadVersion(int n) {
-//        for (int i = 0; i < n; i++) {
+//        for (int i = 1; i < n; i++) {
 //            if (isBadVersion(i)) {
 //                return i;
 //            }
