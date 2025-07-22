@@ -22,7 +22,7 @@ public class PartitionLabels {
 
 //    Approach 1: Two Pointers
 //    Time complexity  : O(N)
-//    Space complexity : O(k)
+//    Space complexity : O(1)
 
     public static List<Integer> partitionLabels(String s) {
         int[] lastPositions = new int[26];

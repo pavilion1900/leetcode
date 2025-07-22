@@ -30,7 +30,7 @@ public class LongestPalindromicSubstring {
             if (evenLen > rsl[1] - rsl[0] + 1) {
                 int dist = (evenLen >>> 1) - 1;
                 rsl[0] = i - dist;
-                rsl[1] = i + dist + 1;
+                rsl[1] = i + 1 + dist;
             }
         }
         return s.substring(rsl[0], rsl[1] + 1);

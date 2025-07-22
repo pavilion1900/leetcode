@@ -12,10 +12,6 @@ public class LongestPalindromicSubstring {
         System.out.println(longestPalindrome("cbbd"));  // bb
     }
 
-//    Approach 3: Expand From Centers
-//    Time complexity  : O(n * n)
-//    Space complexity : O(1)
-
     public static String longestPalindrome(String s) {
         return null;
     }
