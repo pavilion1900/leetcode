@@ -2,15 +2,19 @@ package org.example.strings.example;
 
 public class ValidAnagram {
 
-//        242. Valid Anagram
-//        Easy
+//    242. Valid Anagram
+//    Easy
 //
-//        Given two strings s and t, return true if t is an anagram of s, and false otherwise.
+//    Given two strings s and t, return true if t is an anagram of s, and false otherwise.
 
     public static void main(String[] args) {
         System.out.println(isAnagram("anagram", "nagaram"));  // true
         System.out.println(isAnagram("rat", "car"));          // false
     }
+
+//    Approach 2: Frequency Counter
+//    Time complexity  : O(n)
+//    Space complexity : O(1)
 
     public static boolean isAnagram(String s, String t) {
         if (s.length() != t.length()) {

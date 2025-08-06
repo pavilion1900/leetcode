@@ -4,11 +4,11 @@ import java.util.Arrays;
 
 public class ReverseString {
 
-//        344. Reverse String
-//        Easy
+//    344. Reverse String
+//    Easy
 //
-//        Write a function that reverses a string. The input string is given as an array of characters s.
-//        You must do this by modifying the input array in-place with O(1) extra memory.
+//    Write a function that reverses a string. The input string is given as an array of characters s.
+//    You must do this by modifying the input array in-place with O(1) extra memory.
 
     public static void main(String[] args) {
         char[] array1 = new char[]{'h', 'e', 'l', 'l', 'o'};
@@ -18,6 +18,10 @@ public class ReverseString {
         System.out.println(Arrays.toString(array1)); // ['o', 'l', 'l', 'e', 'h']
         System.out.println(Arrays.toString(array2)); // ['h', 'a', 'n', 'n', 'a', 'H']
     }
+
+//    Approach 2: Two Pointers, Iteration
+//    Time complexity  : O(n)
+//    Space complexity : O(1)
 
     public static void reverseString(char[] s) {
         int left = 0;
